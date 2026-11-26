@@ -13,8 +13,11 @@ jobs:
           java-version: '17'
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
-      - name: Make gradlew executable
-        run: chmod +x gradlew
+      - name: Download Gradle Wrapper Jar
+        run: |
+          mkdir -p gradle/wrapper
+          curl -L -o gradle/wrapper/gradle-wrapper.jar https://raw.githubusercontent.com/gradle/gradle/master/gradle/wrapper/gradle-wrapper.jar
+          chmod +x gradlew
       - name: Build APK
         run: ./gradlew assembleDebug --stacktrace
       - name: Upload APK
