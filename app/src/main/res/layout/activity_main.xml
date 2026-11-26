@@ -3,11 +3,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000">
-    <com.termux.view.TerminalView
-        android:id="@+id/terminalView"
+    android:background="#000000"
+    android:padding="12dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FACELESS TECH TERMUX"
+        android:textColor="#FF1A1A"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
-    <include layout="@layout/view_extra_keys" />
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Type command..."
+            android:hintTextColor="#888888"
+            android:textColor="#FFFFFF"
+            android:background="#222222"
+            android:padding="10dp" />
+        <Button
+            android:id="@+id/runBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RUN"
+            android:backgroundTint="#FF1A1A"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
 </LinearLayout>
