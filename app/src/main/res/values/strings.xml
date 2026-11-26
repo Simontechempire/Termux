@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Faceless Tech Termux</string>
+    <string name="welcome">Welcome to Faceless Tech Termux</string>
+    <string name="new_session">New Session</string>
+    <string name="close_session">Close Session</string>
+</resources>
